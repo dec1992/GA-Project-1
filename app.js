@@ -44,6 +44,8 @@ cells[frog].classList.add('frog')
 function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
     console.log('lose')
+  } else if (cells[frog].classList.contains('pad') === true) {
+    console.log('win')
   } else {
     console.log('safe')
   }
