@@ -2,6 +2,12 @@ const grid = document.querySelector('.grid')
 const width = 9
 let frog = 76
 const cells = []
+let lives = 3
+const livesdisplay  = document.querySelector('#lives')
+livesdisplay.innerHTML = lives
+let score = 0
+const scoresdisplay = document.querySelector('#score')
+scoresdisplay.innerHTML = score
 
 for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
@@ -44,8 +50,12 @@ cells[frog].classList.add('frog')
 function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
     console.log('lose')
+    lives = lives - 1
+    livesdisplay.innerHTML = lives
   } else if (cells[frog].classList.contains('pad') === true) {
     console.log('win')
+    score = score + 100
+    scoresdisplay.innerHTML = score
   } else {
     console.log('safe')
   }
