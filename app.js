@@ -8,6 +8,7 @@ livesdisplay.innerHTML = lives
 let score = 0
 const scoresdisplay = document.querySelector('#score')
 scoresdisplay.innerHTML = score
+const reset = document.querySelector('#reset')
 
 for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
@@ -49,18 +50,28 @@ cells[frog].classList.add('frog')
 
 function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
-    console.log('lose')
     lives = lives - 1
     livesdisplay.innerHTML = lives
   } else if (cells[frog].classList.contains('pad') === true) {
-    console.log('win')
     score = score + 100
     scoresdisplay.innerHTML = score
-  } else {
-    console.log('safe')
   }
 }
 
+function resetgame() {
+  lives = 3
+  livesdisplay.innerHTML = lives
+  score = 0
+  scoresdisplay.innerHTML = score
+  cells[frog].classList.remove('frog')
+  frog = 76
+  cells[frog].classList.add('frog')
+}
+
+reset.addEventListener('click', () => {
+  resetgame()
+  console.log('clicked')
+})
 
 document.addEventListener('keypress', (event) => {
   const key = event.key
