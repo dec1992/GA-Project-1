@@ -28,16 +28,26 @@ road.forEach((div) => {
 const water = cells.slice(0, 27)
 water.forEach((div) => {
   div.classList.add('water')
+  div.classList.add('loselife')
 })
 
 const firstRow = cells.slice(0, 9)
 for (let i = 1; i < firstRow.length; i += 2) {
   firstRow[i].classList.remove('water')
+  firstRow[i].classList.remove('loselife')
   firstRow[i].classList.add('pad')
 }
 
 
 cells[frog].classList.add('frog')
+
+function safecheck() {
+  if (cells[frog].classList.contains('loselife') === true) {
+    console.log('lose')
+  } else {
+    console.log('safe')
+  }
+}
 
 
 document.addEventListener('keypress', (event) => {
@@ -46,17 +56,23 @@ document.addEventListener('keypress', (event) => {
     cells[frog].classList.remove('frog')
     frog -= width
     cells[frog].classList.add('frog')
+    safecheck()
   } else if (key === 's' && !(frog > (width ** 2) - width - 1)) {
     cells[frog].classList.remove('frog')
     frog += width
     cells[frog].classList.add('frog')
+    safecheck()
   } else if (key === 'a' && !(frog % width === 0)) {
     cells[frog].classList.remove('frog')
     frog -= 1
     cells[frog].classList.add('frog')
+    safecheck()
   } else if (key === 'd' && !(frog % width === width - 1)) {
     cells[frog].classList.remove('frog')
     frog += 1
     cells[frog].classList.add('frog')
+    safecheck()
   }
 })
+
+
