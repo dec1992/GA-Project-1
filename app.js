@@ -22,6 +22,10 @@ let car8 = 60
 let log1 = 20
 let log2 = 19
 let log3 = 18
+let log4 = 11
+let log5 = 12
+let log6 = 16
+let log7 = 17
 
 // Grid
 
@@ -368,6 +372,89 @@ const Interval11 = setInterval(() => {
   }, 1000)
 }, 1000)
 
+const Interval12 = setInterval(() => {
+
+
+  cells[log4].classList.add('log')
+  cells[log4].classList.remove('loselife')
+
+  setTimeout(() => {
+    cells[log4].classList.remove('log')
+    log4 = log4 - 1
+    cells[log4].classList.add('log')
+    cells[log4].classList.remove('loselife')
+    if (log4 <= 8) {
+      cells[log4].classList.remove('log')
+      log4 = 17
+      cells[log4].classList.add('log')
+      cells[log4].classList.remove('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const Interval13 = setInterval(() => {
+
+
+  cells[log5].classList.add('log')
+
+  setTimeout(() => {
+    cells[log5].classList.remove('log')
+    cells[log5].classList.add('loselife')
+    log5 = log5 - 1
+    cells[log5].classList.add('log')
+    if (log5 <= 8) {
+      cells[log5].classList.remove('log')
+      cells[log5].classList.add('loselife')
+      log5 = 17
+      cells[log5].classList.add('log')
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const Interval14 = setInterval(() => {
+
+
+  cells[log6].classList.add('log')
+  cells[log6].classList.remove('loselife')
+
+  setTimeout(() => {
+    cells[log6].classList.remove('log')
+    log6 = log6 - 1
+    cells[log6].classList.add('log')
+    cells[log6].classList.remove('loselife')
+    if (log6 <= 8) {
+      cells[log6].classList.remove('log')
+      log6 = 17
+      cells[log6].classList.add('log')
+      cells[log6].classList.remove('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const Interval15 = setInterval(() => {
+
+
+  cells[log7].classList.add('log')
+
+  setTimeout(() => {
+    cells[log7].classList.remove('log')
+    cells[log7].classList.add('loselife')
+    log7 = log7 - 1
+    cells[log7].classList.add('log')
+    if (log7 <= 8) {
+      cells[log7].classList.remove('log')
+      cells[log7].classList.add('loselife')
+      log7 = 17
+      cells[log7].classList.add('log')
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
 // Frog
 
 cells[frog].classList.add('frog')
