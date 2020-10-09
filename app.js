@@ -19,6 +19,9 @@ let car5 = 45
 let car6 = 54
 let car7 = 57
 let car8 = 60
+let log1 = 20
+let log2 = 19
+let log3 = 18
 
 // Grid
 
@@ -297,6 +300,69 @@ const eigthInterval = setInterval(() => {
       cells[car8].classList.add('car2')
       cells[car8].classList.add('loselife')
 
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+// Logs
+
+const ninthInterval = setInterval(() => {
+
+
+  cells[log1].classList.add('log')
+  cells[log1].classList.remove('loselife')
+
+  setTimeout(() => {
+    cells[log1].classList.remove('log')
+    log1 = log1 + 1
+    cells[log1].classList.add('log')
+    cells[log1].classList.remove('loselife')
+    if (log1 >= 27) {
+      cells[log1].classList.remove('log')
+      log1 = 18
+      cells[log1].classList.add('log')
+      cells[log1].classList.remove('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const Interval10 = setInterval(() => {
+
+
+  cells[log2].classList.add('log')
+
+  setTimeout(() => {
+    cells[log2].classList.remove('log')
+    log2 = log2 + 1
+    cells[log2].classList.add('log')
+    if (log2 >= 27) {
+      cells[log2].classList.remove('log')
+      log2 = 18
+      cells[log2].classList.add('log')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const Interval11 = setInterval(() => {
+
+
+  cells[log3].classList.add('log')
+
+  setTimeout(() => {
+    cells[log3].classList.remove('log')
+    cells[log3].classList.add('loselife')
+    log3 = log3 + 1
+    cells[log3].classList.add('log')
+    if (log3 >= 27) {
+      cells[log3].classList.remove('log')
+      cells[log3].classList.add('loselife')
+      log3 = 18
+      cells[log3].classList.add('log')
     }
     safecheck()
   }, 1000)
