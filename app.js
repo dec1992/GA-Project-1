@@ -1,3 +1,5 @@
+// Variables
+
 const grid = document.querySelector('.grid')
 const width = 9
 let frog = 76
@@ -9,6 +11,14 @@ let score = 0
 const scoresdisplay = document.querySelector('#score')
 scoresdisplay.innerHTML = score
 const reset = document.querySelector('#reset')
+let car1 = 53
+let car2 = 51
+let car3 = 49
+let car4 = 47
+let car5 = 45
+
+// Grid
+
 
 for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
@@ -46,8 +56,34 @@ for (let i = 1; i < firstRow.length; i += 2) {
   firstRow[i].classList.add('pad')
 }
 
+// Functions
 
-let car1 = 53
+function safecheck() {
+  if (cells[frog].classList.contains('loselife') === true) {
+    lives = lives - 1
+    livesdisplay.innerHTML = lives
+    cells[frog].classList.remove('frog')
+    frog = 76
+    cells[frog].classList.add('frog')
+  } else if (cells[frog].classList.contains('pad') === true) {
+    score = score + 100
+    scoresdisplay.innerHTML = score
+  }
+}
+
+function resetgame() {
+  lives = 3
+  livesdisplay.innerHTML = lives
+  score = 0
+  scoresdisplay.innerHTML = score
+  cells[frog].classList.remove('frog')
+  frog = 76
+  cells[frog].classList.add('frog')
+}
+
+// Cars
+
+
 
 const firstInterval = setInterval(() => {
 
@@ -73,7 +109,7 @@ const firstInterval = setInterval(() => {
   }, 1000)
 }, 1000)
 
-let car2 = 51
+
 
 const secondInterval = setInterval(() => {
 
@@ -102,7 +138,7 @@ const secondInterval = setInterval(() => {
 
 }, 1000)
 
-let car3 = 49
+
 
 const thirdInterval = setInterval(() => {
 
@@ -131,7 +167,7 @@ const thirdInterval = setInterval(() => {
 
 }, 1000)
 
-let car4 = 47
+
 
 const fourthInterval = setInterval(() => {
 
@@ -161,7 +197,7 @@ const fourthInterval = setInterval(() => {
 
 }, 1000)
 
-let car5 = 45
+
 
 const fifthInterval = setInterval(() => {
 
@@ -191,39 +227,20 @@ const fifthInterval = setInterval(() => {
 
 }, 1000)
 
+
+// Frog
+
 cells[frog].classList.add('frog')
 
 
-
-
-
-function safecheck() {
-  if (cells[frog].classList.contains('loselife') === true) {
-    lives = lives - 1
-    livesdisplay.innerHTML = lives
-    cells[frog].classList.remove('frog')
-    frog = 76
-    cells[frog].classList.add('frog')
-  } else if (cells[frog].classList.contains('pad') === true) {
-    score = score + 100
-    scoresdisplay.innerHTML = score
-  }
-}
-
-function resetgame() {
-  lives = 3
-  livesdisplay.innerHTML = lives
-  score = 0
-  scoresdisplay.innerHTML = score
-  cells[frog].classList.remove('frog')
-  frog = 76
-  cells[frog].classList.add('frog')
-}
+// Buttons
 
 reset.addEventListener('click', () => {
   resetgame()
   console.log('clicked')
 })
+
+// Movement
 
 document.addEventListener('keypress', (event) => {
   const key = event.key
