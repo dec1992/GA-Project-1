@@ -10,6 +10,11 @@ livesdisplay.innerHTML = lives
 let score = 0
 const scoresdisplay = document.querySelector('#score')
 scoresdisplay.innerHTML = score
+const highscoredisplay = document.querySelector('#highscore')
+let highScore = localStorage.getItem('highScore')
+if (highScore > 0) {
+  highscoredisplay.innerHTML = highScore
+}
 const reset = document.querySelector('#reset')
 let car1 = 53
 let car2 = 51
@@ -103,15 +108,13 @@ function safecheck() {
       frog = 76
       cells[frog].classList.add('frog')
     }
-    // if (cells[1].classlist.contains('frogpad')) {
-    //   console.log('pad1')
-
-
-    // }
   }
 }
 
 function resetgame() {
+  if (score > highScore) {
+    newHighScore(score)
+  }
   lives = 3
   livesdisplay.innerHTML = lives
   score = 0
@@ -127,6 +130,14 @@ function resetgame() {
   cells[5].classList.remove('loselife')
   cells[7].classList.remove('frogpad')
   cells[7].classList.remove('loselife')
+  
+  
+}
+
+function newHighScore(num) {
+  localStorage.setItem('highScore', num)
+  highScore = num
+  highscoredisplay.innerHTML = highScore
 }
 
 // Cars
