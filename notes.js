@@ -43,3 +43,5 @@ const secondInterval = setInterval(() => {
   }, 1000)
 
 }, 1000)
+
+if (cells[1].classlist.contains('frogpad') === true && cells[3].classlist.contains('frogpad') === true && cells[5].classlist.contains('frogpad') === true && cells[7].classlist.contains('frogpad') === true) {

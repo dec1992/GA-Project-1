@@ -82,7 +82,28 @@ function safecheck() {
     cells[frog].classList.add('frogpad')
     cells[frog].classList.add('loselife')
     frog = 76
-    cells[frog].classList.add('frog')    
+    cells[frog].classList.add('frog')
+    if (cells[1].classList.contains('frogpad') && cells[3].classList.contains('frogpad') && cells[5].classList.contains('frogpad') && cells[7].classList.contains('frogpad')){
+      console.log('works')
+      cells[1].classList.remove('frogpad')
+      cells[1].classList.remove('loselife')
+      cells[3].classList.remove('frogpad')
+      cells[3].classList.remove('loselife')
+      cells[5].classList.remove('frogpad')
+      cells[5].classList.remove('loselife')
+      cells[7].classList.remove('frogpad')
+      cells[7].classList.remove('loselife')
+      score = score + 500
+      scoresdisplay.innerHTML = score
+      cells[frog].classList.remove('frog')
+      frog = 76
+      cells[frog].classList.add('frog')
+    }
+    // if (cells[1].classlist.contains('frogpad')) {
+    //   console.log('pad1')
+      
+
+    // }
   }
 }
 
