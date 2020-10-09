@@ -16,6 +16,9 @@ let car2 = 51
 let car3 = 49
 let car4 = 47
 let car5 = 45
+let car6 = 54
+let car7 = 57
+let car8 = 60
 
 // Grid
 
@@ -227,6 +230,77 @@ const fifthInterval = setInterval(() => {
 
 }, 1000)
 
+const sixthInterval = setInterval(() => {
+
+
+  cells[car6].classList.add('car2')
+  cells[car6].classList.add('loselife')
+
+  setTimeout(() => {
+    cells[car6].classList.remove('car2')
+    cells[car6].classList.remove('loselife')
+    car6 = car6 + 1
+    cells[car6].classList.add('car2')
+    cells[car6].classList.add('loselife')
+    if (car6 >= 63) {
+      cells[car6].classList.remove('car2')
+      cells[car6].classList.remove('loselife')
+      car6 = 54
+      cells[car6].classList.add('car2')
+      cells[car6].classList.add('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const seventhInterval = setInterval(() => {
+
+
+  cells[car7].classList.add('car2')
+  cells[car7].classList.add('loselife')
+
+  setTimeout(() => {
+    cells[car7].classList.remove('car2')
+    cells[car7].classList.remove('loselife')
+    car7 = car7 + 1
+    cells[car7].classList.add('car2')
+    cells[car7].classList.add('loselife')
+    if (car7 >= 63) {
+      cells[car7].classList.remove('car2')
+      cells[car7].classList.remove('loselife')
+      car7 = 54
+      cells[car7].classList.add('car2')
+      cells[car7].classList.add('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
+
+const eigthInterval = setInterval(() => {
+
+
+  cells[car8].classList.add('car2')
+  cells[car8].classList.add('loselife')
+
+  setTimeout(() => {
+    cells[car8].classList.remove('car2')
+    cells[car8].classList.remove('loselife')
+    car8 = car8 + 1
+    cells[car8].classList.add('car2')
+    cells[car8].classList.add('loselife')
+    if (car8 >= 63) {
+      cells[car8].classList.remove('car2')
+      cells[car8].classList.remove('loselife')
+      car8 = 54
+      cells[car8].classList.add('car2')
+      cells[car8].classList.add('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+}, 1000)
 
 // Frog
 
