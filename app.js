@@ -53,17 +53,23 @@ const firstInterval = setInterval(() => {
 
 
   cells[car1].classList.add('car')
+  cells[car1].classList.add('loselife')
 
   setTimeout(() => {
     cells[car1].classList.remove('car')
+    cells[car1].classList.remove('loselife')
     car1 = car1 - 1
     cells[car1].classList.add('car')
+    cells[car1].classList.add('loselife')
     if (car1 <= 44) {
       cells[car1].classList.remove('car')
+      cells[car1].classList.remove('loselife')
       car1 = 53
       cells[car1].classList.add('car')
+      cells[car1].classList.add('loselife')
 
     }
+    safecheck()
   }, 1000)
 }, 1000)
 
@@ -73,19 +79,113 @@ const secondInterval = setInterval(() => {
 
 
   cells[car2].classList.add('car')
-
+  cells[car2].classList.add('loselife')
 
 
   setTimeout(() => {
     cells[car2].classList.remove('car')
+    cells[car2].classList.remove('loselife')
     car2 = car2 - 1
     cells[car2].classList.add('car')
+    cells[car2].classList.add('loselife')
     if (car2 <= 44) {
       cells[car2].classList.remove('car')
+      cells[car2].classList.remove('loselife')
       car2 = 53
       cells[car2].classList.add('car')
+      cells[car2].classList.add('loselife')
 
     }
+    safecheck()
+  }, 1000)
+
+
+}, 1000)
+
+let car3 = 49
+
+const thirdInterval = setInterval(() => {
+
+
+  cells[car3].classList.add('car')
+  cells[car3].classList.add('loselife')
+
+
+  setTimeout(() => {
+    cells[car3].classList.remove('car')
+    cells[car3].classList.remove('loselife')
+    car3 = car3 - 1
+    cells[car3].classList.add('car')
+    cells[car3].classList.add('loselife')
+    if (car3 <= 44) {
+      cells[car3].classList.remove('car')
+      cells[car3].classList.remove('loselife')
+      car3 = 53
+      cells[car3].classList.add('car')
+      cells[car3].classList.add('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+
+
+}, 1000)
+
+let car4 = 47
+
+const fourthInterval = setInterval(() => {
+
+
+  cells[car4].classList.add('car')
+  cells[car4].classList.add('loselife')
+
+
+
+  setTimeout(() => {
+    cells[car4].classList.remove('car')
+    cells[car4].classList.remove('loselife')
+    car4 = car4 - 1
+    cells[car4].classList.add('car')
+    cells[car4].classList.add('loselife')
+    if (car4 <= 44) {
+      cells[car4].classList.remove('car')
+      cells[car4].classList.remove('loselife')
+      car4 = 53
+      cells[car4].classList.add('car')
+      cells[car4].classList.add('loselife')
+
+    }
+    safecheck()
+  }, 1000)
+
+
+}, 1000)
+
+let car5 = 45
+
+const fifthInterval = setInterval(() => {
+
+
+  cells[car5].classList.add('car')
+  cells[car5].classList.add('loselife')
+
+
+
+  setTimeout(() => {
+    cells[car5].classList.remove('car')
+    cells[car5].classList.remove('loselife')
+    car5 = car5 - 1
+    cells[car5].classList.add('car')
+    cells[car5].classList.add('loselife')
+    if (car5 <= 44) {
+      cells[car5].classList.remove('car')
+      cells[car5].classList.remove('loselife')
+      car5 = 53
+      cells[car5].classList.add('car')
+      cells[car5].classList.add('loselife')
+
+    }
+    safecheck()
   }, 1000)
 
 
@@ -101,6 +201,9 @@ function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
     lives = lives - 1
     livesdisplay.innerHTML = lives
+    cells[frog].classList.remove('frog')
+    frog = 76
+    cells[frog].classList.add('frog')
   } else if (cells[frog].classList.contains('pad') === true) {
     score = score + 100
     scoresdisplay.innerHTML = score
