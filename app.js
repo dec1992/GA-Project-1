@@ -3,7 +3,7 @@ const width = 9
 let frog = 76
 const cells = []
 let lives = 3
-const livesdisplay  = document.querySelector('#lives')
+const livesdisplay = document.querySelector('#lives')
 livesdisplay.innerHTML = lives
 let score = 0
 const scoresdisplay = document.querySelector('#score')
@@ -14,6 +14,7 @@ for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
   div.classList.add('cell')
   grid.appendChild(div)
+  div.innerHTML = i
   cells.push(div)
 }
 
@@ -46,7 +47,55 @@ for (let i = 1; i < firstRow.length; i += 2) {
 }
 
 
+let car1 = 53
+
+const firstInterval = setInterval(() => {
+
+
+  cells[car1].classList.add('car')
+
+  setTimeout(() => {
+    cells[car1].classList.remove('car')
+    car1 = car1 - 1
+    cells[car1].classList.add('car')
+    if (car1 <= 44) {
+      cells[car1].classList.remove('car')
+      car1 = 53
+      cells[car1].classList.add('car')
+
+    }
+  }, 1000)
+}, 1000)
+
+let car2 = 51
+
+const secondInterval = setInterval(() => {
+
+
+  cells[car2].classList.add('car')
+
+
+
+  setTimeout(() => {
+    cells[car2].classList.remove('car')
+    car2 = car2 - 1
+    cells[car2].classList.add('car')
+    if (car2 <= 44) {
+      cells[car2].classList.remove('car')
+      car2 = 53
+      cells[car2].classList.add('car')
+
+    }
+  }, 1000)
+
+
+}, 1000)
+
 cells[frog].classList.add('frog')
+
+
+
+
 
 function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
