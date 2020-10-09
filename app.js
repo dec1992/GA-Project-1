@@ -78,6 +78,11 @@ function safecheck() {
   } else if (cells[frog].classList.contains('pad') === true) {
     score = score + 100
     scoresdisplay.innerHTML = score
+    cells[frog].classList.remove('frog')
+    cells[frog].classList.add('frogpad')
+    cells[frog].classList.add('loselife')
+    frog = 76
+    cells[frog].classList.add('frog')    
   }
 }
 
