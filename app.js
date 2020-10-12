@@ -136,8 +136,8 @@ function resetgame() {
   cells[5].classList.remove('loselife')
   cells[7].classList.remove('frogpad')
   cells[7].classList.remove('loselife')
-  
-  
+
+
 }
 
 function newHighScore(num) {
@@ -549,3 +549,27 @@ document.addEventListener('keypress', (event) => {
 })
 
 
+upButton.addEventListener('click', () => {
+  cells[frog].classList.remove('frog')
+  frog -= width
+  cells[frog].classList.add('frog')
+  safecheck()
+})
+leftButton.addEventListener('click', () => {
+  cells[frog].classList.remove('frog')
+  frog -= 1
+  cells[frog].classList.add('frog')
+  safecheck()
+})
+downButton.addEventListener('click', () => {
+  cells[frog].classList.remove('frog')
+  frog += width
+  cells[frog].classList.add('frog')
+  safecheck()
+})
+rightButton.addEventListener('click', () => {
+  cells[frog].classList.remove('frog')
+  frog += 1
+  cells[frog].classList.add('frog')
+  safecheck()
+})
