@@ -550,26 +550,34 @@ document.addEventListener('keypress', (event) => {
 
 
 upButton.addEventListener('click', () => {
-  cells[frog].classList.remove('frog')
-  frog -= width
-  cells[frog].classList.add('frog')
-  safecheck()
+  if (!(frog < width)) {
+    cells[frog].classList.remove('frog')
+    frog -= width
+    cells[frog].classList.add('frog')
+    safecheck()
+  }
 })
 leftButton.addEventListener('click', () => {
-  cells[frog].classList.remove('frog')
-  frog -= 1
-  cells[frog].classList.add('frog')
-  safecheck()
+  if (!(frog % width === 0)) {
+    cells[frog].classList.remove('frog')
+    frog -= 1
+    cells[frog].classList.add('frog')
+    safecheck()
+  }
 })
 downButton.addEventListener('click', () => {
-  cells[frog].classList.remove('frog')
-  frog += width
-  cells[frog].classList.add('frog')
-  safecheck()
+  if (!(frog > (width ** 2) - width - 1)) {
+    cells[frog].classList.remove('frog')
+    frog += width
+    cells[frog].classList.add('frog')
+    safecheck()
+  }
 })
 rightButton.addEventListener('click', () => {
-  cells[frog].classList.remove('frog')
-  frog += 1
-  cells[frog].classList.add('frog')
-  safecheck()
+  if (!(frog % width === width - 1)) {
+    cells[frog].classList.remove('frog')
+    frog += 1
+    cells[frog].classList.add('frog')
+    safecheck()
+  }
 })
