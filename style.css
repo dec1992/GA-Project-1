@@ -1,14 +1,98 @@
 * {
   box-sizing: border-box;
+  font-family: 'VT323', monospace;
+  color: #0fcc00;
+  /* background-color: black; */
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0
+  margin: 0;
+  background-color: black;
+  border: 2px solid #0fcc00;
+}
+
+header {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 250px;
+  padding-top: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+}
+
+.scoreboard {
+  padding: 15px 30px;
+  margin: 10px 10px;
+  border: 2px solid #0fcc00;
+  border-radius: 5%;
+  color: #0fcc00;
+}
+
+.scoreboard:hover {
+  background-color: #0fcc00;
+  color: black;
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  color: #0fcc00;
+  
+}
+
+.label {
+  padding: 0px 20px;
+  
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#secondrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  padding: 10px;
+  border: 2px solid #0fcc00;
+  border-radius: 5%;
+  color: #0fcc00;
+  margin: 0px 10px 10px 10px;
+
+}
+
+#topbutton {
+  padding: 10px 15px;
+}
+
+.button:hover {
+  background-color: #0fcc00;
+  color: black;
+}
+.instructions {
+  padding-top: 20px;
+  margin-bottom: 40px;
 }
 
 .grid {
@@ -18,48 +102,69 @@ body {
   width: 600px;
   height: 600px;
   flex-wrap: wrap;
+  background-image: url(images/background.jpg);
 }
 
 .cell {
   width: 11.11%;
   height: 11.11%;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 
 
 .grass {
-  background-color: green;
+  /* background-color: green; */
 }
 
 .road {
-  background-color: black;
+  /* background-color: black; */
 }
 
 .water {
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .pad {
-  background-color: yellow;
+  background-image: url(images/pad-copy.png);
 }
 
 .car {
-  background-color: pink;
+  background-image: url(images/ufo-copy.png);
 }
 
 .car2 {
-  background-color: purple;
+  background-image: url(images/rocket-copy.png);
 }
 
 .log {
-  background-color: saddlebrown;
+  background-image: url(images/log-copy.png);
 }
 
 .frog {
-  background-color: red;
+  background-image: url(images/frog2.png);
+  animation: blink 1s steps(1, end) infinite;
+}
+
+.blink {
+  animation: blink 0.8s steps(1, end) infinite;
 }
 
 .frogpad {
-  background-color: skyblue;
+  background-image: url(images/frogpad.png);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frogger</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+  </style>
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+  <header>
+    <img src="images/logo.png" alt="logo">
+  </header>
   <section class="scores">
-    <div id="score"></div>
-    <div id="lives"></div>
-    <div id="highscore">0</div>
-    <div id="reset">Reset</div>
+    <div class="scoreboard">Score: <span id="score"></span></div>
+    <div class="scoreboard">Lives: <span id="lives"></span></div>
+    <div class="scoreboard">High Score: <span id="highscore">0</span></div>
+    <div class="scoreboard" id="reset">Reset</div>
   </section>
   <div class="grid">
   </div>
+  <section class="buttons">
+    <div>
+      <div class="button" id="topbutton">Up</div>
+    </div>
+    <div id="secondrow">
+      <div class="button" id="leftbutton">Left</div>
+      <div class="button" id="downbutton">Down</div>
+      <div class="button" id="rightbutton">Right</div>
+    </div>
+  </section>
+  <section class="instructions">
+    <div id="keyboard">Use the W, A, S, D keys to move!</div>
+  </section>
   <script src="app.js"></script>
 </body>
+
 </html>

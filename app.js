@@ -32,6 +32,11 @@ let log5 = 12
 let log6 = 16
 let log7 = 17
 
+const upButton = document.querySelector('#topbutton')
+const leftButton = document.querySelector('#leftbutton')
+const downButton = document.querySelector('#downbutton')
+const rightButton = document.querySelector('#rightbutton')
+
 // Grid
 
 
@@ -39,7 +44,7 @@ for (let i = 0; i < width ** 2; i++) {
   const div = document.createElement('div')
   div.classList.add('cell')
   grid.appendChild(div)
-  div.innerHTML = i
+  // div.innerHTML = i
   cells.push(div)
 }
 
@@ -80,6 +85,7 @@ function safecheck() {
     cells[frog].classList.remove('frog')
     frog = 76
     cells[frog].classList.add('frog')
+    alert(`Oh no! Life lost! Lives reamining: ${lives}`)
     if (lives <= 0) {
       alert(`You Lose! Final score: ${score}`)
       resetgame()
@@ -513,7 +519,6 @@ cells[frog].classList.add('frog')
 
 reset.addEventListener('click', () => {
   resetgame()
-  console.log('clicked')
 })
 
 // Movement
