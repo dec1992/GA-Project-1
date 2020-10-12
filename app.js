@@ -83,6 +83,7 @@ function safecheck() {
     lives = lives - 1
     livesdisplay.innerHTML = lives
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog = 76
     cells[frog].classList.add('frog')
     alert(`Oh no! Life lost! Lives reamining: ${lives}`)
@@ -126,6 +127,7 @@ function resetgame() {
   score = 0
   scoresdisplay.innerHTML = score
   cells[frog].classList.remove('frog')
+  removeFrogLog()
   frog = 76
   cells[frog].classList.add('frog')
   cells[1].classList.remove('frogpad')
@@ -144,6 +146,15 @@ function newHighScore(num) {
   localStorage.setItem('highScore', num)
   highScore = num
   highscoredisplay.innerHTML = highScore
+}
+
+function addFrogLog() {
+  if (frog >= 9 && frog <= 26) {
+    cells[frog].classList.add('froglog')
+  }
+}
+function removeFrogLog () {
+  cells[frog].classList.remove('froglog')
 }
 
 // Cars
@@ -527,23 +538,31 @@ document.addEventListener('keypress', (event) => {
   const key = event.key
   if (key === 'w' && !(frog < width)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog -= width
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   } else if (key === 's' && !(frog > (width ** 2) - width - 1)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog += width
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   } else if (key === 'a' && !(frog % width === 0)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog -= 1
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   } else if (key === 'd' && !(frog % width === width - 1)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog += 1
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   }
 })

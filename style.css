@@ -2,11 +2,9 @@
   box-sizing: border-box;
   font-family: 'VT323', monospace;
   color: #0fcc00;
-  /* background-color: black; */
 }
 
 body {
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,20 +109,6 @@ img {
   /* border: 1px solid grey; */
 }
 
-
-
-.grass {
-  /* background-color: green; */
-}
-
-.road {
-  /* background-color: black; */
-}
-
-.water {
-  /* background-color: blue; */
-}
-
 .pad {
   background-image: url(images/pad-copy.png);
 }
@@ -145,7 +129,9 @@ img {
   background-image: url(images/frog2.png);
   animation: blink 1s steps(1, end) infinite;
 }
-
+.froglog {
+  background-image: url(images/froglog.png);
+}
 .blink {
   animation: blink 0.8s steps(1, end) infinite;
 }
@@ -198,6 +184,8 @@ img {
     background-size: cover;
   }
 
+ 
+
   .log {
     background-size: cover;
   }
@@ -214,6 +202,9 @@ img {
     background-size: cover;
   }
   .frogpad {
+    background-size: cover;
+  }
+  .froglog {
     background-size: cover;
   }
 }
