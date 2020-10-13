@@ -155,11 +155,7 @@ img {
   }
 }
 
-@media (pointer: coarse) {
-  .buttons{
-    display: flex;
-  }
-}
+
 
 @media only screen and (max-width: 620px) {
   .grid {
@@ -205,4 +201,9 @@ img {
     background-size: cover;
   }
 
+}
+@media (pointer: coarse) {
+  .buttons{
+    display: flex;
+  }
 }

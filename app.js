@@ -591,32 +591,40 @@ document.addEventListener('keypress', (event) => {
 upButton.addEventListener('click', () => {
   if (!(frog < width)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog -= width
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   }
 })
 leftButton.addEventListener('click', () => {
   if (!(frog % width === 0)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog -= 1
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   }
 })
 downButton.addEventListener('click', () => {
   if (!(frog > (width ** 2) - width - 1)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog += width
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   }
 })
 rightButton.addEventListener('click', () => {
   if (!(frog % width === width - 1)) {
     cells[frog].classList.remove('frog')
+    removeFrogLog()
     frog += 1
     cells[frog].classList.add('frog')
+    addFrogLog()
     safecheck()
   }
 })
