@@ -153,10 +153,28 @@ function addFrogLog() {
     cells[frog].classList.add('froglog')
   }
 }
-function removeFrogLog () {
+function removeFrogLog() {
   cells[frog].classList.remove('froglog')
 }
 
+function frogLogLeft() {
+  if (frog > 9 && frog <= 17) {
+    cells[frog].classList.remove('froglog') 
+    cells[frog].classList.remove('frog')
+    frog = frog - 1
+    cells[frog].classList.remove('loselife')
+    cells[frog].classList.add('froglog')
+  }
+}
+
+function frogLogRight() {
+  if (frog >= 18 && frog < 26) {
+    cells[frog].classList.remove('froglog') 
+    cells[frog].classList.remove('frog')
+    frog = frog + 1
+    cells[frog].classList.add('froglog')
+  }
+}
 // Cars
 
 
@@ -414,6 +432,7 @@ const Interval10 = setInterval(() => {
       cells[log2].classList.add('log')
 
     }
+    frogLogRight()
     safecheck()
   }, 1000)
 }, 1000)
@@ -476,6 +495,7 @@ const Interval13 = setInterval(() => {
       log5 = 17
       cells[log5].classList.add('log')
     }
+    frogLogLeft()
     safecheck()
   }, 1000)
 }, 1000)
