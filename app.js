@@ -36,6 +36,17 @@ const upButton = document.querySelector('#topbutton')
 const leftButton = document.querySelector('#leftbutton')
 const downButton = document.querySelector('#downbutton')
 const rightButton = document.querySelector('#rightbutton')
+const difficulty = prompt("Choose difficulty: easy, medium, hard")
+let interval = 200
+if (difficulty === 'hard') {
+  setDifficulty(600)
+} else if (difficulty === 'easy') {
+  setDifficulty(1000)
+} else {
+  setDifficulty(800)
+}
+
+console.log(interval)
 
 // Grid
 
@@ -175,6 +186,11 @@ function frogLogRight() {
     cells[frog].classList.add('froglog')
   }
 }
+
+function setDifficulty(num) {
+  interval = num
+  return interval
+}
 // Cars
 
 
@@ -200,8 +216,8 @@ const firstInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 
 
@@ -227,10 +243,10 @@ const secondInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
+  }, interval)
 
 
-}, 1000)
+}, interval)
 
 
 
@@ -256,10 +272,10 @@ const thirdInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
+  }, interval)
 
 
-}, 1000)
+}, interval)
 
 
 
@@ -286,10 +302,10 @@ const fourthInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
+  }, interval)
 
 
-}, 1000)
+}, interval)
 
 
 
@@ -316,10 +332,10 @@ const fifthInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
+  }, interval)
 
 
-}, 1000)
+}, interval)
 
 const sixthInterval = setInterval(() => {
 
@@ -342,8 +358,8 @@ const sixthInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const seventhInterval = setInterval(() => {
 
@@ -366,8 +382,8 @@ const seventhInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const eigthInterval = setInterval(() => {
 
@@ -390,8 +406,8 @@ const eigthInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 // Logs
 
@@ -414,8 +430,8 @@ const ninthInterval = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval10 = setInterval(() => {
 
@@ -434,8 +450,8 @@ const Interval10 = setInterval(() => {
     }
     frogLogRight()
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval11 = setInterval(() => {
 
@@ -454,8 +470,8 @@ const Interval11 = setInterval(() => {
       cells[log3].classList.add('log')
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval12 = setInterval(() => {
 
@@ -476,8 +492,8 @@ const Interval12 = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval13 = setInterval(() => {
 
@@ -497,8 +513,8 @@ const Interval13 = setInterval(() => {
     }
     frogLogLeft()
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval14 = setInterval(() => {
 
@@ -519,8 +535,8 @@ const Interval14 = setInterval(() => {
 
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 
 const Interval15 = setInterval(() => {
 
@@ -539,8 +555,8 @@ const Interval15 = setInterval(() => {
       cells[log7].classList.add('log')
     }
     safecheck()
-  }, 1000)
-}, 1000)
+  }, interval)
+}, interval)
 // Frog
 
 cells[frog].classList.add('frog')
