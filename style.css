@@ -125,6 +125,10 @@ img {
   background-image: url(images/log-copy.png);
 }
 
+.bonuspoint {
+  background-color: red;
+}
+
 .frog {
   background-image: url(images/frog2.png);
   animation: blink 1s steps(1, end) infinite;

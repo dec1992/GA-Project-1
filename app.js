@@ -46,8 +46,6 @@ if (difficulty === 'hard') {
   setDifficulty(800)
 }
 
-console.log(interval)
-
 // Grid
 
 
@@ -125,6 +123,7 @@ function safecheck() {
       cells[frog].classList.remove('frog')
       frog = 76
       cells[frog].classList.add('frog')
+      bonusPoints()
     }
   }
 }
@@ -190,6 +189,16 @@ function frogLogRight() {
 function setDifficulty(num) {
   interval = num
   return interval
+}
+
+function bonusPoints() {
+  const randomIndex = Math.floor((Math.random()) * 18)
+  console.log(randomIndex)
+  grass2[randomIndex].classList.add('bonuspoint')
+  console.log(cells[randomIndex])
+  setTimeout(() => {
+    grass2[randomIndex].classList.remove('bonuspoint')
+  }, 5000)
 }
 // Cars
 
