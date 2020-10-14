@@ -126,7 +126,7 @@ img {
 }
 
 .bonuspoint {
-  background-color: red;
+  background-image: url(images/coin.png);
 }
 
 .frog {
@@ -202,6 +202,10 @@ img {
     background-size: cover;
   }
   .frogpad {
+    background-size: cover;
+  }
+
+  .bonuspoint {
     background-size: cover;
   }
 

@@ -197,9 +197,7 @@ function setDifficulty(num) {
 
 function bonusPoints() {
   const randomIndex = Math.floor((Math.random()) * 18)
-  console.log(randomIndex)
   grass2[randomIndex].classList.add('bonuspoint')
-  console.log(cells[randomIndex])
   setTimeout(() => {
     grass2[randomIndex].classList.remove('bonuspoint')
   }, 5000)
