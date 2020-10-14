@@ -125,6 +125,10 @@ function safecheck() {
       cells[frog].classList.add('frog')
       bonusPoints()
     }
+  } else if (cells[frog].classList.contains('bonuspoint')) {
+    score = score + 200
+    scoresdisplay.innerHTML = score
+    cells[frog].classList.remove('bonuspoint')
   }
 }
 
