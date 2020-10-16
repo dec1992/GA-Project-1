@@ -72,7 +72,7 @@ You can launch the game on GitHub pages [here](https://dec1992.github.io/project
  	div.classList.add('water')
   	div.classList.add('loselife')
 	})  
-```
+	```
 
 ### Frog movement 
 - A single event listener is used for the main frog movement. The event listener is listening for keypresses, and using if statements to differentiate between directions.
@@ -137,27 +137,27 @@ leftButton.addEventListener('click', () => {
     safecheck()
   }
 })
-downButton.addEventListener('click', () => {
-  if (!(frog > (width ** 2) - width - 1)) {
+	downButton.addEventListener('click', () => {
+  	if (!(frog > (width ** 2) - width - 1)) {
     cells[frog].classList.remove('frog')
     removeFrogLog()
     frog += width
     cells[frog].classList.add('frog')
     addFrogLog()
     safecheck()
-  }
-})
-rightButton.addEventListener('click', () => {
-  if (!(frog % width === width - 1)) {
-    cells[frog].classList.remove('frog')
-    removeFrogLog()
-    frog += 1
-    cells[frog].classList.add('frog')
-    addFrogLog()
-    safecheck()
-  }
-})
-```
+  	}
+	})
+	rightButton.addEventListener('click', () => {
+  	if (!(frog % width === width - 1)) {
+   	cells[frog].classList.remove('frog')
+   	removeFrogLog()
+   	frog += 1
+   	cells[frog].classList.add('frog')
+   	addFrogLog()
+   	safecheck()
+  	}
+	})
+	```
 
 ### Game timing 
 - The obstacles are created and moved using setIntervals. Similar to the frog movement, these intervals contain code to add and remove the required classes for either cars or logs.
