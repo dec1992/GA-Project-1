@@ -1,5 +1,6 @@
 
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) 
+
 ###General Assembly, Software Engineering Immersive
 
 # Space Frogger
@@ -52,25 +53,25 @@ You can launch the game on GitHub pages [here](https://dec1992.github.io/project
 	}
 
 	const grass1 = cells.slice(63)
-grass1.forEach((div) => {
-  div.classList.add('grass')
-})
+	grass1.forEach((div) => {
+  	div.classList.add('grass')
+	})
 
 	const grass2 = cells.slice(27, 45)
-grass2.forEach((div) => {
-  div.classList.add('grass')
-})
+	grass2.forEach((div) => {
+  	div.classList.add('grass')
+	})
 
 	const road = cells.slice(45, 63)
-road.forEach((div) => {
-  div.classList.add('road')
-})
+	road.forEach((div) => {
+  	div.classList.add('road')
+	})
 
 	const water = cells.slice(0, 27)
-water.forEach((div) => {
-  div.classList.add('water')
-  div.classList.add('loselife')
-})  
+	water.forEach((div) => {
+ 	div.classList.add('water')
+  	div.classList.add('loselife')
+	})  
 ```
 
 ### Frog movement 
@@ -183,8 +184,9 @@ rightButton.addEventListener('click', () => {
 
     }
     safecheck()
-  }, interval)
-}, interval)  ```
+  	}, interval)
+	}, interval)  
+```
 
 ### Collisions 
 - Collision detection in this game was largely handled by the safecheck funtion:
@@ -232,9 +234,10 @@ rightButton.addEventListener('click', () => {
     score = score + 200
     scoresdisplay.innerHTML = score
     cells[frog].classList.remove('bonuspoint')
-  }
-}
-    ```
+  	}
+	}
+	
+	```
 - The function checks for an overlap between the frog class and the loselife class each time the frog moves, and adjusts the score and life variables accordingly.
 
 - The function also checks for the level win and the lose condition and alters the game as required.
