@@ -157,7 +157,9 @@ leftButton.addEventListener('click', () => {
    	safecheck()
   	}
 	})
+
 	```
+
 
 ### Game timing 
 - The obstacles are created and moved using setIntervals. Similar to the frog movement, these intervals contain code to add and remove the required classes for either cars or logs.
@@ -187,6 +189,7 @@ leftButton.addEventListener('click', () => {
   	}, interval)
 	}, interval)  
 	```
+
 
 ### Collisions 
 - Collision detection in this game was largely handled by the safecheck funtion:
