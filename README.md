@@ -157,14 +157,13 @@ leftButton.addEventListener('click', () => {
    	safecheck()
   	}
 	})
-
-	```
+```
 
 
 ### Game timing 
 - The obstacles are created and moved using setIntervals. Similar to the frog movement, these intervals contain code to add and remove the required classes for either cars or logs.
 
-  ```js
+ ```js
     const firstInterval = setInterval(() => {
 
 
@@ -194,7 +193,7 @@ leftButton.addEventListener('click', () => {
 ### Collisions 
 - Collision detection in this game was largely handled by the safecheck funtion:
   
-    ```js
+```js
    function safecheck() {
   if (cells[frog].classList.contains('loselife') === true) {
     lives = lives - 1
@@ -239,8 +238,8 @@ leftButton.addEventListener('click', () => {
     cells[frog].classList.remove('bonuspoint')
   	}
 	}
-	
-	```
+```
+
 - The function checks for an overlap between the frog class and the loselife class each time the frog moves, and adjusts the score and life variables accordingly.
 
 - The function also checks for the level win and the lose condition and alters the game as required.
