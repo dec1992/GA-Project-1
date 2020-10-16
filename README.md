@@ -187,7 +187,7 @@ leftButton.addEventListener('click', () => {
     safecheck()
   	}, interval)
 	}, interval)  
-	```
+```
 
 
 ### Collisions 
