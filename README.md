@@ -306,6 +306,8 @@ At all times various variables are used to keep track of things happening in the
 
 - My initial approach to this challenge resulted in repetitive code in a few areas, planning this better or refactoring these areas would have made some of the later challenges much easier.
 
+- One of the biggest wins for this project was adding the buttons to control the frog's movement on touch devices. This was achieved using a pointer media query.
+
 ## Artwork and credit
 
 All of the artwork in this project is my own, created using a mix of Photoshop and Illustrator.
