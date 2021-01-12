@@ -12,7 +12,7 @@ This is my first project of the software engineering immersive course at GA Lond
 
 Given a list of options from GA, I chose to re-create the classic game **Frogger**. 
 
-You can launch the game on GitHub pages [here](https://dec1992.github.io/project-1/), or find the GitHub repo [here](https://github.com/dec1992/project-1).
+You can launch the game on GitHub pages [here](https://dec1992.github.io/GA-Project-1/), or find the GitHub repo [here](https://github.com/dec1992/project-1).
 
 ## Brief
 
